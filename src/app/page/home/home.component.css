@@ -1,0 +1,338 @@
+/* Adicione o caminho para o Bootstrap no seu node_modules */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.container-chale {
+  width: 100%;
+  height: 591px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  height: 591px;
+  width: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
+.gradiente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(to top, rgba(39, 37, 37, 0.5) 50%, rgba(66, 66, 66, 0) 80%);
+}
+
+.carousel {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin: 0 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: auto;
+    height: 280px;
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text__container {
+  color: #fff;
+  font-family: var(--font-family-roboto);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  /* 70px */
+}
+
+.button {
+  margin-top: 200px !important;
+  width: 25.5rem;
+  height: 3em;
+  border-radius: 18px;
+  background: #4A83B1;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-family-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  /* Centralizar verticalmente o texto dentro do botão */
+  line-height: 50px;
+}
+
+/* Descubra nossa historia  */
+
+.us_history_container {
+  display: flex;
+  align-items: center;
+}
+
+.us_history {
+  align-items: center;
+  display: flex;
+  width: 60%;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #989c9b;
+  border-radius: 6px;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.button_saibamais {
+  background-color: #231F20;
+  display: inline-flex;
+  width: 300px;
+  gap: 10px;
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 16px;
+  /* 150% */
+}
+
+.title_story {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  /* 125% */
+}
+
+.text_story {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 175% */
+}
+
+
+
+.extras {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  background-color: #eef1f3;
+}
+
+.container_extra {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 20px;
+
+
+  h2.title-extra {
+    color: #161616;
+    font-family: var(--font-family-poppins);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  p.text_story {
+    color: #000000;
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    color: #000000;
+    font-family: var(--font-family-poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  p {
+    color: #000000;
+    font-family: var(--font-family-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+.container_extra_acess {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  /* Espaço entre as colunas */
+  padding: 20px;
+  width: 60%;
+
+  h5,
+  p {
+    color: #ffffff;
+    font-family: var(--font-family-poppins);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .feature-container {
+    display: flex;
+  }
+
+
+}
+
+#carouselExampleControls {
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+  margin-left: 40px;
+  border-radius: 16px;
+
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .container-chale {
+    height: auto;
+    /* Altura automática para acomodar o conteúdo */
+  }
+
+  .text__container {
+    font-size: 24px;
+    /* Reduzir o tamanho da fonte */
+  }
+
+  .button {
+    margin-top: 20px !important;
+    /* Reduzir a margem superior */
+    width: 80%;
+    /* Largura do botão */
+    height: 50px;
+    /* Altura do botão */
+    font-size: 16px;
+    /* Tamanho da fonte do botão */
+    line-height: 50px;
+    /* Altura da linha do botão */
+  }
+
+  .us_history {
+    width: 100%;
+    /* Largura total */
+    flex-direction: column;
+    /* Alterar para direção de coluna */
+    height: auto;
+    /* Altura automática */
+    padding: 20px;
+    /* Adicionar espaço interno */
+  }
+
+  .button_saibamais {
+    width: 80%;
+    /* Largura do botão */
+    height: 50px;
+    /* Altura do botão */
+    font-size: 16px;
+    /* Tamanho da fonte do botão */
+    line-height: 24px;
+    /* Altura da linha do botão */
+  }
+
+  .container_extra {
+    width: 90%;
+    /* Largura do contêiner */
+    margin: 20px auto;
+    /* Margem automática */
+    padding: 10px;
+    /* Adicionar espaço interno */
+  }
+
+  .container_extra_acess {
+    grid-template-columns: 1fr;
+    /* Uma coluna */
+    gap: 10px;
+    /* Espaço entre as linhas */
+    padding: 10px;
+    /* Adicionar espaço interno */
+  }
+
+  #carouselExampleControls {
+    width: 90%;
+    /* Largura do carousel */
+    margin: auto;
+    /* Centralizar */
+    margin-bottom: 20px;
+    /* Margem inferior */
+  }
+}
+
+
+

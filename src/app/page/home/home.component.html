@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+
+
+<div class="container-chale">
+
+  <div class="card-img-container">
+    <!-- <img src="../../../assets/logo/logo-capa.png" alt="" class="card-img"> -->
+    <div class="carousel">
+      <div class="slides">
+        <img src="../../../assets/capa_carousel/IMG_0082.JPG" *ngIf="showSlide(0)"
+          alt="Imagem de uma pulverizadora de cor laranja em um campo verde">
+        <img src="../../../assets/capa_carousel/IMG_0086.JPG" *ngIf="showSlide(1)"
+          alt="Imagem de uma pulverizadora de cor laranja em um campo verde">
+        <img src="../../../assets/capa_carousel/IMG_0093.JPG" *ngIf="showSlide(2)"
+          alt="Imagem de uma pulverizadora de cor laranja em um campo verde">
+      </div>
+      <div class="indicators">
+        <span class="indicator" [class.active]="showSlide(0)" (click)="goToSlide(0)"></span>
+        <span class="indicator" [class.active]="showSlide(1)" (click)="goToSlide(1)"></span>
+        <span class="indicator" [class.active]="showSlide(2)" (click)="goToSlide(2)"></span>
+      </div>
+    </div>
+    <div class="gradiente"></div>
+
+  </div>
+  <div class="text-overlay">
+    <!-- <p class="text__container">"Viva uma experiência <br> única em um lugar incrível <br> perto da natureza"</p> -->
+    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank" class="button">Faça sua reserva agora</a>
+  </div>
+</div>
+
+<!-- <app-carousel></app-carousel> -->
+
+
+<div class="extras">
+  <div id="carouselExampleControls" class="carousel carousel-have" data-ride="carousel">
+    <div class="carousel-inner">
+      <ol class=" carousel-indicators">
+        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+      </ol>
+      <div *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" class="carousel-item">
+        <img [src]="image" alt="Slide {{ i }}">
+      </div>
+      <div *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" class="carousel-item">
+        <img [src]="image" alt="Slide {{ i }}">
+      </div>
+      <div *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" class="carousel-item">
+        <img [src]="image" alt="Slide {{ i }}">
+      </div>
+    </div>
+    <a class="carousel-control-prev" (click)="prevImage()">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" (click)="nextImage()">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+
+
+
+  <div class="container_extra">
+    <h2 class=" title-extra">Aqui a sua experiência vai ser <br> ainda mais inesquecível</h2>
+    <p class="text_story">Pensando em você nós deizamos sua estadia na Mundarium ainda mais incrível! <br>
+      Agende com antecedência pelo nosso WhatsApp e aproveite serviços exclusivos. <br> Surpreenda-se com o conforto que
+      preparamos para você!</p>
+    <div class="container_extra_acess">
+      <div>
+        <h5 class="feature-container">Banheira com hidro <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>Oferecemos essa incrivel expêriencia de relaxamento oriental,ofornecemos também roupas de cama, banho e
+          roupões para o uso dos hóspedes.</p>
+      </div>
+      <div>
+        <h5 class="feature-container">Rede Suspensa <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>tem rede suspensa com vista lindíssima. Para curtir momentos com uma bela vista</p>
+      </div>
+      <div>
+        <h5 class="feature-container">Ar-condicionado <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>Oferecemos também um ambiente cliaticozado pensando sempre no seu bem-estar</p>
+      </div>
+      <div>
+        <h5 class="feature-container">Decoração Temática <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>Para você e seu parceiro fazer aquela refeição maravilhosa</p>
+      </div>
+      <div>
+        <h5 class="feature-container">Wi-fi <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>Conexão rápida de internet para que você consiga trabalhar, navegar e se divertir.</p>
+      </div>
+      <div>
+        <h5 class="feature-container">Lareira <img src="../../../assets/check-circle.svg" alt=""></h5>
+        <p>Fósforo, lenha e acendedor em gel estão disponíveis na cabana para aquecer em noites mais frias.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-about-us></app-about-us> -->
+
+<app-option-passeio></app-option-passeio>
+<app-footer></app-footer>
